@@ -220,7 +220,7 @@ body.step3 #step1, body.step3 #step2 {
     }
 
     video {
-        height: calc(100% - 50px);
+        /* height: calc(100% - 50px); */
     }
 
     figure {
@@ -287,6 +287,8 @@ body.step3 #step1, body.step3 #step2 {
     }
 
     #step1 .button-wrapper {
+        position: fixed;
+        bottom: 0;
         padding: 1px;
         border: 1px solid #fff;
         height: 60px;
