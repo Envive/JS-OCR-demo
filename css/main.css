@@ -273,7 +273,6 @@ body.step3 #step1, body.step3 #step2 {
         flex: 1;
         display: flex;
         justify-content: center;
-        /* text-align: center; */
     }
 
     .nav li a {
