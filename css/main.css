@@ -218,7 +218,8 @@ body.step3 #step1, body.step3 #step2 {
 
     .jumbotron {
         flex: 1;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        overflow: auto;
     }
 
     .jumbotron > div {
@@ -232,4 +233,9 @@ body.step3 #step1, body.step3 #step2 {
     blockquote {
         width: 100%;
     }
+
+    #step2 p {
+        width: 100%;
+    }
+
 }
