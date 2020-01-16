@@ -231,7 +231,7 @@
         // await worker.setParameters({
         //   tessedit_char_whitelist: '0123456789',
         // });
-        const { data: { text } } = await worker.recognize('https://imgur.com/a/IkFYu6W');
+        const { data: { text } } = await worker.recognize('img/example_t.png');
         console.log(text);
         await worker.terminate();
       })();
