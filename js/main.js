@@ -209,7 +209,7 @@
         var worker = new Tesseract.TesseractWorker();
         var OEM = Tesseract.OEM;
 
-        worker.recognize(ctx, 'eng', {
+        worker.recognize(ctx, {
           init_oem: OEM.TESSERACT_ONLY,
           tessedit_char_whitelist: '0123456789',
         }).then(function (result) {
