@@ -197,12 +197,22 @@ body.step3 #step1, body.step3 #step2 {
 }
 
 @media screen and (max-width: 768px) {
-    html, body, .container {
+    html, body, .container, video {
         height: 100%;
     }
 
     blockquote, #step2 p {
         width: 100%;
+    }
+
+    #step1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    figure {
+        flex: 1;
+        height: 100%;
     }
 
     .header {
@@ -247,5 +257,10 @@ body.step3 #step1, body.step3 #step2 {
 
     .nav li a {
         max-width: 7rem;
+    }
+
+    #takePicture {
+        height: 55px;
+        width: 100px;
     }
 }
