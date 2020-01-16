@@ -229,4 +229,19 @@ body.step3 #step1, body.step3 #step2 {
         align-items: center;
         justify-content: center;
     }
+
+    .nav {
+        display: flex;
+    }
+
+    .nav li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+    }
+
+    .nav li a {
+        max-width: 7rem;
+    }
 }
