@@ -231,7 +231,7 @@
         await worker.setParameters({
           tessedit_char_whitelist: '0123456789',
         });
-        const { data: { text } } = await worker.recognize('img/example_t.png');
+        const { data: { text } } = await worker.recognize('img/example_2.png');
         console.log(text);
         await worker.terminate();
       })();
