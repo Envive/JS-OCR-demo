@@ -197,7 +197,7 @@ body.step3 #step1, body.step3 #step2 {
 }
 
 @media screen and (max-width: 768px) {
-    html, body, .container, video {
+    html, body, .container {
         height: 100%;
     }
 
@@ -208,6 +208,10 @@ body.step3 #step1, body.step3 #step2 {
     #step1 {
         display: flex;
         flex-direction: column;
+    }
+
+    video {
+        height: calc(100% - 50px);
     }
 
     figure {
