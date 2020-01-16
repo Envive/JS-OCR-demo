@@ -198,14 +198,28 @@
         $('blockquote footer').text('');
 
         // do the OCR!
-        Tesseract.recognize(ctx).then(function (result) {
-            var resultText = result.text ? result.text.trim() : '';
+        // Tesseract.recognize(ctx).then(function (result) {
+        //     var resultText = result.text ? result.text.trim() : '';
 
-            //show the result
-            spinner.hide();
-            $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
-            $('blockquote footer').text('(' + resultText.length + ' characters)');
-        });
+        //     //show the result
+        //     spinner.hide();
+        //     $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
+        //     $('blockquote footer').text('(' + resultText.length + ' characters)');
+        // });
+        var worker = new Tesseract.TesseractWorker();
+        var OEM = Tesseract.OEM;
+
+        worker.recognize(ctx, 'eng', {
+          init_oem: OEM.TESSERACT_ONLY,
+          tessedit_char_whitelist: '0123456789',
+        }).then(function (result) {
+          var resultText = result.text ? result.text.trim() : '';
+
+          //show the result
+          spinner.hide();
+          $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
+          $('blockquote footer').text('(' + resultText.length + ' characters)');
+      });
     }
 
     /*********************************
