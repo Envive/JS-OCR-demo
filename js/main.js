@@ -208,33 +208,33 @@
         // });
 
         /////////////////////////////
-      //   var worker = new Tesseract.TesseractWorker();
-      //   var OEM = Tesseract.OEM;
+        var worker = new Tesseract.TesseractWorker();
+        var OEM = Tesseract.OEM;
 
-      //   worker.recognize('img/example_2.png', 'eng', {
-      //     init_oem: OEM.TESSERACT_ONLY,
-      //     tessedit_char_whitelist: '0123456789',
-      //   }).then(function (result) {
-      //     var resultText = result.text ? result.text.trim() : '';
-
-      //     //show the result
-      //     spinner.hide();
-      //     $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
-      //     $('blockquote footer').text('(' + resultText.length + ' characters)');
-      // });
-////////////////////////////////////
-      const worker = new Tesseract.createWorker();
-      (async () => {
-        await worker.load();
-        await worker.loadLanguage('eng');
-        await worker.initialize('eng');
-        await worker.setParameters({
+        worker.recognize('img/example_3.png', 'eng', {
+          init_oem: OEM.TESSERACT_ONLY,
           tessedit_char_whitelist: '0123456789',
-        });
-        const { data: { text } } = await worker.recognize('img/example_3.png');
-        console.log(text);
-        await worker.terminate();
-      })();
+        }).then(function (result) {
+          var resultText = result.text ? result.text.trim() : '';
+
+          //show the result
+          spinner.hide();
+          $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
+          $('blockquote footer').text('(' + resultText.length + ' characters)');
+      });
+////////////////////////////////////
+      // const worker = new Tesseract.createWorker();
+      // (async () => {
+      //   await worker.load();
+      //   await worker.loadLanguage('eng');
+      //   await worker.initialize('eng');
+      //   await worker.setParameters({
+      //     tessedit_char_whitelist: '0123456789',
+      //   });
+      //   const { data: { text } } = await worker.recognize('img/example_3.png');
+      //   console.log(text);
+      //   await worker.terminate();
+      // })();
     }
 
     /*********************************
