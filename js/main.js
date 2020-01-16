@@ -231,7 +231,7 @@
         // await worker.setParameters({
         //   tessedit_char_whitelist: '0123456789',
         // });
-        const { data: { text } } = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
+        const { data: { text } } = await worker.recognize(ctx);
         console.log(text);
         await worker.terminate();
       })();
