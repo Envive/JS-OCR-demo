@@ -248,7 +248,7 @@
 
     $('#takePicture').click(function () {
         // step2();
-        // changeStep(2);
+        changeStep(2);
         step3();
         changeStep(3);
     });
