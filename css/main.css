@@ -197,7 +197,7 @@ body.step3 #step1, body.step3 #step2 {
 }
 
 @media screen and (max-width: 768px) {
-    html, body, .container {
+    html, body, .container, blockquote, #step2 p {
         height: 100%;
     }
 
@@ -229,13 +229,4 @@ body.step3 #step1, body.step3 #step2 {
         align-items: center;
         justify-content: center;
     }
-
-    blockquote {
-        width: 100%;
-    }
-
-    #step2 p {
-        width: 100%;
-    }
-
 }
