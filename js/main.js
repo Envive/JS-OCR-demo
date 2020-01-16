@@ -223,8 +223,7 @@
       //     $('blockquote footer').text('(' + resultText.length + ' characters)');
       // });
 ////////////////////////////////////
-      import { createWorker } from 'tesseract.js';
-      const worker = createWorker();
+      const worker = new Tesseract.createWorker();
       (async () => {
         await worker.load();
         await worker.loadLanguage('eng');
