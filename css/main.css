@@ -366,5 +366,6 @@ body.step3 #step1, body.step3 #step2 {
 
     #preview-wrapper {
         overflow: hidden;
+        display: none;
     }
 }
