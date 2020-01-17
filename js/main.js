@@ -324,6 +324,9 @@
     });
 
     $('#start-over').click(function () {
+        $("#sp > .value").html('辨识中...');
+        $("#dp > .value").html('辨识中...');
+        $("#pulse > .value").html('辨识中...');  
         changeStep(1);
         hideError();
     });
