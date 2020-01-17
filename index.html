@@ -49,28 +49,43 @@
             <button class="btn btn-lg btn-success" id="adjust" disabled>撷取</button>
         </div>
         <div id="step3">
-
             <blockquote>
-                <h3 class="text-center">录入体征</h3>
-                <figure>
+                <h3 class="text-center">输入体征</h3>
+                <figure style="display: none" id="preview-wrapper">
                     <canvas></canvas>
                 </figure>
+                <div class="button-wrapper">
+                    <button class="btn btn-sm btn-default" id="start-over">
+                        <img style="width: 100%" src="./img/camera.png" />
+                    </button>
+                    <span>拍照自动识别</span>
+                </div>
                 <div class="result-wrapper">
                     <div id="sp">
-                        <div class="title">收缩压</div>
-                        <div class="value text-right">辨识中...</div>
+                        <div class="title">收缩压<span>(mmHg)</span></div>
+                        <div class="value text-right">
+                            <span>
+                                辨识中...
+                            </span>
+                            <span class="note-nav"> > </span class="note-nav">
+                        </div>
                     </div>
                     <div id="dp">
-                        <div class="title">舒张压</div>
-                        <div class="value text-right">辨识中...</div>
+                        <div class="title">舒张压<span>(mmHg)</span></div>
+                        <div class="value text-right"><span>
+                            辨识中...
+                        </span>
+                        <span class="note-nav"> > </span></div>
                     </div>
                     <div id="pulse">
-                        <div class="title">心律</div>
-                        <div class="value text-right">辨识中...</div>
+                        <div class="title">心率<span>(bpm)</span></div>
+                        <div class="value text-right">
+                            <span>
+                                辨识中...
+                            </span>
+                            <span class="note-nav"> > </span>
+                        </div>
                     </div>
-                </div>
-                <div class="button-wrapper">
-                    <button class="btn btn-sm btn-default" id="start-over">重新拍照</button>
                 </div>
                 <div class="spinner" style="display: none;">
                     <div class="bounce1"></div>

@@ -312,11 +312,19 @@ body.step3 #step1, body.step3 #step2 {
     #step3 .button-wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 5px;
+        flex-direction: column;
+        height: 150px;
+        align-items: center;
     }
 
     #step3 figure{
         height: auto;
+    }
+
+    #step3 #start-over {
+        height: 75px;
+        width: 75px;
+        border-radius: 75px;
     }
 
     .spinner {
@@ -344,5 +352,13 @@ body.step3 #step1, body.step3 #step2 {
 
     .alert {
         margin-bottom: 0px;
+    }
+
+    .title span{
+        font-size: 0.6rem;
+    }
+
+    #pulse {
+        margin-top: 0.5rem;
     }
 }
